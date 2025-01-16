@@ -22,6 +22,7 @@
 }
 .main-container{
     //background: linear-gradient(180deg, #fff, #d1a3a3);
+    background-color: #f8ebeb;
 }
 
 mat-card {
@@ -43,13 +44,13 @@ mat-card {
 }
 
 .card-title {
-    font-family: 'Comic Sans MS';
+    font-family: 'ComicSansMS';
     margin-top: 10px;
     margin-bottom: 2px;
 }
 
 .card-subtitle {
-    font-family: 'Comic Sans MS';
+    font-family: 'ComicSansMS';
     margin-top: 5px;
     margin-bottom: 5px;
     color: green;
