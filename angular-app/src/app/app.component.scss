@@ -11,25 +11,25 @@
     padding-bottom: 15px;
 }
 .title{
+    font-family: 'Holiday';
+    color: rgb(39, 39, 39);
     text-align: center;;
 }
 .description{
     text-align: justify;
     margin: 20px;
+    line-height: 26px;
 }
 .main-container{
-    background: linear-gradient(180deg, #fff, #d1a3a3);
-
+    //background: linear-gradient(180deg, #fff, #d1a3a3);
 }
 
 mat-card {
     text-align: center;
     border-radius: 5px;
-    //margin-right: 2px;
 }
 
 .home-container {
-    //background-color: #e9d9d8;
     padding-bottom: 10px;
 }
 
@@ -43,11 +43,15 @@ mat-card {
 }
 
 .card-title {
+    font-family: 'Comic Sans MS';
+    margin-top: 10px;
     margin-bottom: 2px;
 }
 
 .card-subtitle {
-    margin-top: 0px;
+    font-family: 'Comic Sans MS';
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: green;
     font-weight: 500;
 }
@@ -55,10 +59,6 @@ mat-card {
 mat-card-actions {
     display: block;
     margin-top: auto;
-}
-
-.descritivo-bilhete {
-    font-weight: 500;
 }
 
 mat-icon {
@@ -138,4 +138,15 @@ mat-icon {
         border-radius: 5px;
         margin-bottom: 2vw;
     }
+    #localizacao{
+        padding-bottom: 20px;
+        .edificio{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            border-radius: 5px;
+        }
+    }
+
 }

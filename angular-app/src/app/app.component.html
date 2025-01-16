@@ -1,11 +1,11 @@
 <div class="main-container">
     <div class="home-container">
-        <img src="/aniversario-50-anos-arlete/arlete-50.png" class="logo-arlete-50">
+        <img [src]="getImagePath('arlete-50.png')" class="logo-arlete-50">
         <div class="home-images-container">
-            <img class="home-images" src="https://media.istockphoto.com/id/945135434/vector/image-photo-icon.jpg?s=612x612&w=0&k=20&c=Wq3uIvgOKbUg0lOplPIML5PpKzvlQv7QODHHoMc5TcU=">
-            <img class="home-images" src="https://media.istockphoto.com/id/945135434/vector/image-photo-icon.jpg?s=612x612&w=0&k=20&c=Wq3uIvgOKbUg0lOplPIML5PpKzvlQv7QODHHoMc5TcU=">
-            <img class="home-images" src="https://media.istockphoto.com/id/945135434/vector/image-photo-icon.jpg?s=612x612&w=0&k=20&c=Wq3uIvgOKbUg0lOplPIML5PpKzvlQv7QODHHoMc5TcU=">
-            <img class="home-images" src="https://media.istockphoto.com/id/945135434/vector/image-photo-icon.jpg?s=612x612&w=0&k=20&c=Wq3uIvgOKbUg0lOplPIML5PpKzvlQv7QODHHoMc5TcU=">
+            <img class="home-images" [src]="getImagePath('img.jpg')">
+            <img class="home-images" [src]="getImagePath('img.jpg')">
+            <img class="home-images" [src]="getImagePath('img.jpg')">
+            <img class="home-images" [src]="getImagePath('img.jpg')">
         </div>
     </div>
     <h1 class="title">Sobre a comemoração</h1>
@@ -24,7 +24,7 @@
         
         <mat-card class="card" appearance="outlined">
         
-            <img mat-card-image class="mat-card-image" src="https://cdn.awsli.com.br/600x1000/2076/2076647/produto/237975852/zvdu5dvdq-1--i9d7w096wy.png">
+            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
             
             <mat-card-content>
                 <h3 class="card-title">Manicure do bairro</h3>
@@ -41,7 +41,7 @@
     
         <mat-card class="card" appearance="outlined">
     
-            <img mat-card-image class="mat-card-image" src="https://m.media-amazon.com/images/I/51Fq5DMh7hL._AC_SL1200_.jpg">
+            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
         
             <mat-card-content>
                 <h3 class="card-title">Creme de cabelo</h3>
@@ -58,7 +58,7 @@
     
         <mat-card class="card" appearance="outlined">
     
-            <img mat-card-image class="mat-card-image" src="https://m.media-amazon.com/images/I/51Fq5DMh7hL._AC_SL1200_.jpg">
+            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
         
             <mat-card-content>
                 <h3 class="card-title">Escadinha</h3>
@@ -75,7 +75,7 @@
     
         <mat-card class="card" appearance="outlined">
     
-            <img mat-card-image class="mat-card-image" src="https://m.media-amazon.com/images/I/51Fq5DMh7hL._AC_SL1200_.jpg">
+            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
         
             <mat-card-content>
                 <h3 class="card-title">Escadinha</h3>
@@ -92,7 +92,7 @@
     
         <mat-card class="card" appearance="outlined">
     
-            <img mat-card-image class="mat-card-image" src="https://m.media-amazon.com/images/I/51Fq5DMh7hL._AC_SL1200_.jpg">
+            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
         
             <mat-card-content>
                 <h3 class="card-title">Escadinha</h3>
@@ -109,7 +109,7 @@
     
         <mat-card class="card" appearance="outlined">
     
-            <img mat-card-image class="mat-card-image" src="https://m.media-amazon.com/images/I/51Fq5DMh7hL._AC_SL1200_.jpg">
+            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
         
             <mat-card-content>
                 <h3 class="card-title">Escadinha</h3>
@@ -131,10 +131,13 @@
         Para facilitar o acesso ao salão de festas, por favor preencher o formulário com nome completo e número de documento de todos os convidados.
     </p>
 
-    <h1 class="title">Localização</h1>
-    <p class="description">
-        Aguardo sua presença no salão de festas do prédio Renoir 2.
-        Otelo Rodrigues Franco, 543 
-    </p>
-    
+    <div id="localizacao">
+        <h1 class="title">Localização</h1>
+        <p class="description">
+            Aguardo sua presença no salão de festas do prédio Renoir 2.
+        </p>
+        <p class="description">R. Gen. Otelo Rodrigues Franco, 543 - Canto do Forte, Praia Grande.</p>
+        <img [src]="getImagePath('renoir2.jpg')" alt="Edifício Renoir 2" class="edificio">
+    </div>
+
 </div>
