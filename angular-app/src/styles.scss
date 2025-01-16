@@ -3,11 +3,13 @@
     src: url('../public/Best\ Holiday.ttf') format('truetype');
     font-weight: normal;
 }
+
 @font-face {
     font-family: 'ComicSansMS';
     src: url('../public/Comic\ Sans\ MS.ttf') format('truetype');
     font-weight: normal;
 }
+
 
 html,
 body {
@@ -15,6 +17,5 @@ body {
 }
 
 body {
-    margin: 0;
-    font-family: 'Verdana', Segoe UI, sans-serif;
+    margin: 0; font-family: Verdana, "Helvetica Neue", sans-serif;
 }

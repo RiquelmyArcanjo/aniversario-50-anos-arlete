@@ -20,5 +20,12 @@ export class AppComponent implements OnInit {
     const basePath = window.location.hostname === 'localhost' ? '' : '/aniversario-50-anos-arlete';
     return `${basePath}/${imageName}`;
   }
+  
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 }

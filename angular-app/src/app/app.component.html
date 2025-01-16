@@ -2,134 +2,153 @@
     <div class="home-container">
         <img [src]="getImagePath('arlete-50.png')" class="logo-arlete-50">
         <div class="home-images-container">
-            <img class="home-images" [src]="getImagePath('img.jpg')">
-            <img class="home-images" [src]="getImagePath('img.jpg')">
-            <img class="home-images" [src]="getImagePath('img.jpg')">
-            <img class="home-images" [src]="getImagePath('img.jpg')">
+            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('sobre')">
+            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('presentes')">
+            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('confirmacao')">
+            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('localizacao')">
         </div>
     </div>
-    <h1 class="title">Sobre a comemoração</h1>
-    <p class="description">
-        Estou completando 50 anos e não poderia deixar de compartilhar esse momento incrível com você!
-        Afinal, meio século de vida merece ser celebrado. Foram muitas alegrias, superações, conquistas, lembranças e histórias vividas. E você faz parte dessa trajetória, por isso quero comemorar ao seu lado!   
-        Será uma festa repleta de boas energias, risadas, lembranças, música boa e muita diversão!
-    </p>
-
-    <h1 class="title">Presentes</h1>
-    <p class="description">
-        Se você deseja me presentear, deixo aqui sugestões de presentes práticos e criativos,  podendo ser realizados com um PIX, que serão muito bem vindos e apreciados.
-        Fique à vontade para escolher o que achar melhor. Sua presença e carinho já são o maior presente que eu poderia pedir!
-    </p>
-    <div class="gifts-container">
-        
-        <mat-card class="card" appearance="outlined">
-        
-            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
-            
-            <mat-card-content>
-                <h3 class="card-title">Manicure do bairro</h3>
-                <p class="card-subtitle">R$ 59,99</p>
-                <p>
-                    Com esse creme a Arlete conseguirá deixar os seus cachos cada vez mais lindos
-                </p>
-                
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>PRESENTEAR ESSE</button>
-            </mat-card-actions>
-        </mat-card>
-    
-        <mat-card class="card" appearance="outlined">
-    
-            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
-        
-            <mat-card-content>
-                <h3 class="card-title">Creme de cabelo</h3>
-                <p class="card-subtitle">R$ 89,99</p>
-                <p>
-                    Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
-                </p>
-                
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>PRESENTEAR ESSE</button>
-            </mat-card-actions>
-        </mat-card>
-    
-        <mat-card class="card" appearance="outlined">
-    
-            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
-        
-            <mat-card-content>
-                <h3 class="card-title">Escadinha</h3>
-                <p class="card-subtitle">R$ 109,99</p>
-                <p>
-                    Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
-                </p>
-                
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>PRESENTEAR ESSE</button>
-            </mat-card-actions>
-        </mat-card>
-    
-        <mat-card class="card" appearance="outlined">
-    
-            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
-        
-            <mat-card-content>
-                <h3 class="card-title">Escadinha</h3>
-                <p class="card-subtitle">R$ 129,99</p>
-                <p>
-                    Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
-                </p>
-                
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>PRESENTEAR ESSE</button>
-            </mat-card-actions>
-        </mat-card>
-    
-        <mat-card class="card" appearance="outlined">
-    
-            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
-        
-            <mat-card-content>
-                <h3 class="card-title">Escadinha</h3>
-                <p class="card-subtitle">R$ 149,99</p>
-                <p>
-                    Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
-                </p>
-                
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>PRESENTEAR ESSE</button>
-            </mat-card-actions>
-        </mat-card>
-    
-        <mat-card class="card" appearance="outlined">
-    
-            <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
-        
-            <mat-card-content>
-                <h3 class="card-title">Escadinha</h3>
-                <p class="card-subtitle">R$ 179,99</p>
-                <p>
-                    Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
-                </p>
-                
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>PRESENTEAR ESSE</button>
-            </mat-card-actions>
-        </mat-card>
-    
+    <div id="sobre">
+        <h1 class="title">Sobre a comemoração</h1>
+        <p class="description">
+            Estou completando 50 anos e não poderia deixar de compartilhar esse momento incrível com você!
+            Afinal, meio século de vida merece ser celebrado. Foram muitas alegrias, superações, conquistas, lembranças
+            e histórias vividas. E você faz parte dessa trajetória, por isso quero comemorar ao seu lado!
+            Será uma festa repleta de boas energias, risadas, lembranças, música boa e muita diversão!
+        </p>
     </div>
-    <h1 class="title">Confirmação</h1>
-    <p class="description">
-        Confirme sua presença e venha celebrar a vida!
-        Para facilitar o acesso ao salão de festas, por favor preencher o formulário com nome completo e número de documento de todos os convidados.
-    </p>
+
+    <div id="presentes">
+        <h1 class="title">Presentes</h1>
+        <p class="description">
+            Se você deseja me presentear, deixo aqui sugestões de presentes práticos e criativos, podendo ser realizados
+            com um PIX, que serão muito bem vindos e apreciados.
+            Fique à vontade para escolher o que achar melhor. Sua presença e carinho já são o maior presente que eu
+            poderia pedir!
+        </p>
+        <div class="gifts-container">
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+
+                <mat-card-content>
+                    <h3 class="card-title">Manicure do bairro</h3>
+                    <p class="card-subtitle">R$ 59,99</p>
+                    <p>
+                        Com esse creme a Arlete conseguirá deixar os seus cachos cada vez mais lindos
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+
+                <mat-card-content>
+                    <h3 class="card-title">Creme de cabelo</h3>
+                    <p class="card-subtitle">R$ 89,99</p>
+                    <p>
+                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+
+                <mat-card-content>
+                    <h3 class="card-title">Escadinha</h3>
+                    <p class="card-subtitle">R$ 109,99</p>
+                    <p>
+                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+
+                <mat-card-content>
+                    <h3 class="card-title">Escadinha</h3>
+                    <p class="card-subtitle">R$ 129,99</p>
+                    <p>
+                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+
+                <mat-card-content>
+                    <h3 class="card-title">Escadinha</h3>
+                    <p class="card-subtitle">R$ 149,99</p>
+                    <p>
+                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+
+                <mat-card-content>
+                    <h3 class="card-title">Escadinha</h3>
+                    <p class="card-subtitle">R$ 179,99</p>
+                    <p>
+                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+
+    <div id="confirmacao">
+        <h1 class="title">Confirmação</h1>
+        <p class="description">
+            Confirme sua presença e venha celebrar a vida!
+            Para facilitar o acesso ao salão de festas, por favor preencher o formulário com nome completo e número de
+            documento de todos os convidados.
+        </p>
+
+        <div class="button-confirmar-presenca">
+            <a mat-fab extended href="https://www.google.com"  rel="noopener noreferrer">
+                <mat-icon>check_circle</mat-icon>
+                <p class="confirmar-presenca">Clique aqui para confirmar!</p>
+            </a>
+        </div>
+
+    </div>
 
     <div id="localizacao">
         <h1 class="title">Localização</h1>
