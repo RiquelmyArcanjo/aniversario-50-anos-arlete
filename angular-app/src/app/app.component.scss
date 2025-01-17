@@ -3,26 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-.logo-arlete-50{
+
+.logo-arlete-50 {
     width: 20%;
-    display:flex;
+    display: flex;
     margin: auto;
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.title{
+
+.title {
     font-family: 'Holiday';
     color: rgb(39, 39, 39);
-    text-align: center;;
+    text-align: center;
+    ;
 }
-.description{
+
+.description {
     text-align: justify;
     margin: 20px;
     line-height: 26px;
 }
-.main-container{
-    //background: linear-gradient(180deg, #fff, #d1a3a3);
-    background-color: #f8ebeb;
+
+.main-container {
+    background-color: #f0dcdc;
 }
 
 mat-card {
@@ -70,18 +74,64 @@ mat-icon {
     height: 325px;
 }
 
-.button-confirmar-presenca{
+.button-confirmar-presenca {
     display: flex;
     margin-top: 30px;
     margin-bottom: 40px;
     justify-content: center;
     align-items: center;
-    .mat-icon{
+
+    .mat-icon {
         color: rgb(9, 121, 84);
     }
-    .confirmar-presenca{
+
+    .confirmar-presenca {
         font-weight: 300;
     }
+
+    .mat-mdc-extended-fab {
+        background-color: #f0c4c4;
+    }
+}
+
+.event-container {
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.event-date {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b76e79;
+    /* Rose gold color */
+    margin-bottom: 10px;
+}
+
+.event-time {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #6d6875;
+    margin-top: 5px;
+}
+
+.decorative-line {
+    width: 180px;
+    height: 3px;
+    background: linear-gradient(90deg, #b76e79, #ffd1dc, #b76e79);
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -97,12 +147,14 @@ mat-icon {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .logo-arlete-50{
+    .logo-arlete-50 {
         width: 50%;
     }
+
     .card {
         width: 33%;
     }
+
     .home-images-container {
         width: 95%;
         display: flex;
@@ -114,6 +166,7 @@ mat-icon {
         margin-top: 10px;
         margin-bottom: 20px;
     }
+
     .home-images {
         width: 49%;
         height: 49vw;
@@ -123,19 +176,23 @@ mat-icon {
 }
 
 @media (max-width: 480px) {
-    .logo-arlete-50{
+    .logo-arlete-50 {
         width: 70%;
     }
-    .gifts-container{
+
+    .gifts-container {
         justify-content: space-between;
     }
+
     .card {
         width: 49%;
         margin-bottom: 10px;
+
         .mat-card-image {
             height: 225px;
         }
     }
+
     .home-images-container {
         width: 95%;
         display: flex;
@@ -147,15 +204,18 @@ mat-icon {
         margin-top: 10px;
         margin-bottom: 20px;
     }
+
     .home-images {
         width: 49%;
         height: 49vw;
         border-radius: 5px;
         margin-bottom: 2vw;
     }
-    #localizacao{
+
+    #localizacao {
         padding-bottom: 10px;
-        .edificio{
+
+        .edificio {
             display: flex;
             margin-left: auto;
             margin-right: auto;

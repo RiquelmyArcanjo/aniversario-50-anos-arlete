@@ -1,25 +1,46 @@
 <div class="main-container">
     <div class="home-container">
         <img [src]="getImagePath('arlete-50.png')" class="logo-arlete-50">
+
+        <div class="center-content">
+            <h4 style="font-family: ComicSansMS; font-size: 20px; color: rgb(39, 39, 39); text-align: center;">
+                {{ greeting }}, escolha uma opção abaixo:
+            </h4>
+            <span style="font-size: 40px; margin-top: 15px; margin-bottom: 15px;">👇</span>
+        </div>
+
         <div class="home-images-container">
-            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('sobre')">
-            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('presentes')">
-            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('confirmacao')">
-            <img class="home-images" [src]="getImagePath('img.jpg')" (click)="scrollToSection('localizacao')">
+            <img class="home-images" [src]="getImagePath('diadafesta.jpg')" (click)="scrollToSection('sobre')">
+            <img class="home-images" [src]="getImagePath('presente.jpg')" (click)="scrollToSection('presentes')">
+            <img class="home-images" [src]="getImagePath('confirmar.jpg')" (click)="scrollToSection('confirmacao')">
+            <img class="home-images" [src]="getImagePath('local.jpg')" (click)="scrollToSection('localizacao')">
         </div>
     </div>
+
+    
+
     <div id="sobre">
-        <h1 class="title">Sobre a comemoração</h1>
+        <h1 class="title">Como será a festa?</h1>
+        <div class="decorative-line"></div>
         <p class="description">
             Estou completando 50 anos e não poderia deixar de compartilhar esse momento incrível com você!
             Afinal, meio século de vida merece ser celebrado. Foram muitas alegrias, superações, conquistas, lembranças
             e histórias vividas. E você faz parte dessa trajetória, por isso quero comemorar ao seu lado!
-            Será uma festa repleta de boas energias, risadas, lembranças, música boa e muita diversão!
+            Será uma festa repleta de boas energias, risadas, lembranças, música boa, comes e bebes e muita diversão.
+            Tudo isso na data e horário abaixo:
         </p>
-    </div>
 
+        <div class="event-container">
+            <div class="event-date">08/02/2025</div>
+            <div class="decorative-line"></div>
+            <div class="event-time">18:30 a 00:00</div>
+        </div>
+
+    </div>
+    
     <div id="presentes">
         <h1 class="title">Presentes</h1>
+        <div class="decorative-line"></div>
         <p class="description">
             Se você deseja me presentear, deixo aqui sugestões de presentes práticos e criativos, podendo ser realizados
             com um PIX, que serão muito bem vindos e apreciados.
@@ -30,13 +51,14 @@
 
             <mat-card class="card" appearance="outlined">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('pedicure.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Manicure do bairro</h3>
+                    <h3 class="card-title">Pedicure</h3>
                     <p class="card-subtitle">R$ 59,99</p>
                     <p>
-                        Com esse creme a Arlete conseguirá deixar os seus cachos cada vez mais lindos
+                        Depois de tantos passos dados, é hora de dar aos pés um tratamento VIP. Uma pedicure para deixar
+                        tudo pronto para a festa!
                     </p>
 
                 </mat-card-content>
@@ -47,13 +69,13 @@
 
             <mat-card class="card" appearance="outlined">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('massagem.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Creme de cabelo</h3>
+                    <h3 class="card-title">Massagem</h3>
                     <p class="card-subtitle">R$ 89,99</p>
                     <p>
-                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                        Pague um gatinho para manter a aniversariante relaxada e sem dores nas articulações.
                     </p>
 
                 </mat-card-content>
@@ -64,13 +86,13 @@
 
             <mat-card class="card" appearance="outlined">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('abafador.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Escadinha</h3>
+                    <h3 class="card-title">Abafador de som</h3>
                     <p class="card-subtitle">R$ 109,99</p>
                     <p>
-                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                        Esse é para ajudar a aniversariante a conseguir dormir sem ouvir os roncos do marido.
                     </p>
 
                 </mat-card-content>
@@ -81,13 +103,13 @@
 
             <mat-card class="card" appearance="outlined">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('escada.gif')">
 
                 <mat-card-content>
                     <h3 class="card-title">Escadinha</h3>
                     <p class="card-subtitle">R$ 129,99</p>
                     <p>
-                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                        Com esse presente você ajudará ela a alcançar as prateleiras mais altas de casa.
                     </p>
 
                 </mat-card-content>
@@ -98,13 +120,13 @@
 
             <mat-card class="card" appearance="outlined">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('minion.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Escadinha</h3>
+                    <h3 class="card-title">Biquini</h3>
                     <p class="card-subtitle">R$ 149,99</p>
                     <p>
-                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                        Um biquíni novo para provar que, com 50tão, a dona Arlete ainda dá muito caldo.
                     </p>
 
                 </mat-card-content>
@@ -115,13 +137,13 @@
 
             <mat-card class="card" appearance="outlined">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('img.jpg')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('skyncare.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Escadinha</h3>
+                    <h3 class="card-title">Creme antirrugas</h3>
                     <p class="card-subtitle">R$ 179,99</p>
                     <p>
-                        Esse é para ajudar a aniversariante baixinha a alcançar os lugares mais altos.
+                        Esse é um creme tão bom que os anos vão ter que lutar muito para aparecer no rosto dela!
                     </p>
 
                 </mat-card-content>
@@ -132,9 +154,10 @@
 
         </div>
     </div>
-
+    
     <div id="confirmacao">
         <h1 class="title">Confirmação</h1>
+        <div class="decorative-line"></div>
         <p class="description">
             Confirme sua presença e venha celebrar a vida!
             Para facilitar o acesso ao salão de festas, por favor preencher o formulário com nome completo e número de
@@ -142,16 +165,17 @@
         </p>
 
         <div class="button-confirmar-presenca">
-            <a mat-fab extended href="https://www.google.com"  rel="noopener noreferrer">
+            <a mat-fab extended href="https://www.google.com" rel="noopener noreferrer">
                 <mat-icon>check_circle</mat-icon>
                 <p class="confirmar-presenca">Clique aqui para confirmar!</p>
             </a>
         </div>
 
     </div>
-
+    
     <div id="localizacao">
         <h1 class="title">Localização</h1>
+        <div class="decorative-line"></div>
         <p class="description">
             Aguardo sua presença no salão de festas do prédio Renoir 2.
         </p>

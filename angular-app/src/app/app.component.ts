@@ -11,16 +11,28 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class AppComponent implements OnInit {
   title = 'angular-app';
-
+  greeting: string | undefined;
   imgPath: string | undefined;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.greeting = this.getGreeting();
+  }
 
+  getGreeting(): string {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12  ) {
+      return 'Bom dia';
+    } else if (hour >= 12 && hour < 18) {
+      return 'Boa tarde';
+    } else {
+      return 'Boa noite';
+    }
+  }
   getImagePath(imageName: string): string {
     const basePath = window.location.hostname === 'localhost' ? '' : '/aniversario-50-anos-arlete';
     return `${basePath}/${imageName}`;
   }
-  
+
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
