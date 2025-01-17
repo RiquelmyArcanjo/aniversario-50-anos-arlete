@@ -1,5 +1,17 @@
 #dialog{
-    margin: 25px;
+    position: relative;
+    .description{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .payment{
+        margin-bottom: 30px;
+    }
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
 }
 .copy-button-container {
     display: flex;
@@ -11,20 +23,21 @@
 }
 h2{
     font-family: "ComicSansMS";
-    margin-top: 5px;
+    margin-top: 25px;
     text-align: center;
 }
 h3{
     font-family: "ComicSansMS";
     text-align: center;
     color: rgb(9, 121, 84);
-}
-.description{
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 0;
 }
 .tip{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     text-align: center;
 }	
+.finishPayment{
+    width: 100%; 
+    margin-top: 15px;
+}

@@ -6,7 +6,8 @@
             <h4 style="font-family: ComicSansMS; font-size: 20px; color: rgb(39, 39, 39); text-align: center;">
                 {{ greeting }}, escolha uma opção abaixo:
             </h4>
-            <span style="font-size: 40px; margin-top: 15px; margin-bottom: 15px;">👇</span>
+            <!--<span style="font-size: 40px; margin-top: 15px; margin-bottom: 15px;">👇</span>-->
+            <img class="dedo" [src]="getImagePath('dedo.gif')" alt="">
         </div>
 
         <div class="home-images-container">
@@ -33,7 +34,7 @@
         <div class="event-container">
             <div class="event-date">08/02/2025</div>
             <div class="decorative-line"></div>
-            <div class="event-time">18:30 às 00:00</div>
+            <div class="event-time">18h30 às 00h</div>
         </div>
 
     </div>
@@ -52,11 +53,11 @@
         </p>
         <div class="gifts-container">
 
-            <mat-card class="card" appearance="outlined">
+            <mat-card class="card" appearance="outlined" (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle.getAttribute('value')!) : null">
 
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('pedicure.gif')">
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('pedicure.gif')" mat-button>
 
-                <mat-card-content>
+                <mat-card-content mat-button>
                     <h3 class="card-title" #cardTitle value="Pedicure - R$ 59,99">Pedicure</h3>
                     <p class="card-subtitle">R$ 59,99</p>
                     <p>
@@ -66,11 +67,11 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                    <button mat-button>PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
-            <mat-card class="card" appearance="outlined">
+            <mat-card class="card" appearance="outlined" (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle2.getAttribute('value')!) : null">
 
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('escada.gif')">
 
@@ -83,11 +84,11 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle2.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                    <button mat-button>PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
-            <mat-card class="card" appearance="outlined">
+            <mat-card class="card" appearance="outlined" (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle3.getAttribute('value')!) : null">
 
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('abafador.gif')">
 
@@ -100,11 +101,11 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle3.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                    <button mat-button>PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
-            <mat-card class="card" appearance="outlined">
+            <mat-card class="card" appearance="outlined" (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle4.getAttribute('value')!) : null">
 
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('massagem.gif')">
 
@@ -117,11 +118,11 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle4.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                    <button mat-button>PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
-            <mat-card class="card" appearance="outlined">
+            <mat-card class="card" appearance="outlined" (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle5.getAttribute('value')!) : null">
 
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('minion.gif')">
 
@@ -134,11 +135,11 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle5.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                    <button mat-button>PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
-            <mat-card class="card" appearance="outlined">
+            <mat-card class="card" appearance="outlined" (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle6.getAttribute('value')!) : null">
 
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('skyncare.gif')">
 
@@ -151,7 +152,7 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle6.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                    <button mat-button>PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
@@ -182,8 +183,9 @@
         <p class="description">
             Aguardo sua presença no salão de festas do prédio residencial Renoir 2.
         </p>
-        
-        <img [src]="getImagePath('renoir2.jpg')" alt="Edifício Renoir 2" class="edificio">
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=/maps/place/R.%2BGen.%2BOtelo%2BRodrigues%2BFranco,%2B543%2B-%2BCanto%2Bdo%2BForte,%2BPraia%2BGrande%2B-%2BSP,%2B11700-700/data%3D!4m2!3m1!1s0x94ce1d094b1b0c9f:0xd212e3ee3dee1bdf%3Fsa%3DX%26ved%3D1t:242%26ictx%3D111&ved=2ahUKEwi0jsue7vuKAxUYr5UCHTtnAb8Q8gF6BAgjEAI&usg=AOvVaw3K4vX3nogKCu9uw8-spiUl">
+            <img [src]="getImagePath('renoir2.jpg')" alt="Edifício Renoir 2" class="edificio">
+        </a>
 
         <div class="button-icon">
             <a mat-fab extended href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=/maps/place/R.%2BGen.%2BOtelo%2BRodrigues%2BFranco,%2B543%2B-%2BCanto%2Bdo%2BForte,%2BPraia%2BGrande%2B-%2BSP,%2B11700-700/data%3D!4m2!3m1!1s0x94ce1d094b1b0c9f:0xd212e3ee3dee1bdf%3Fsa%3DX%26ved%3D1t:242%26ictx%3D111&ved=2ahUKEwi0jsue7vuKAxUYr5UCHTtnAb8Q8gF6BAgjEAI&usg=AOvVaw3K4vX3nogKCu9uw8-spiUl">
@@ -193,5 +195,6 @@
         </div>
         <p class="description address">📍 Rua General Otelo Rodrigues Franco, 543 - Canto do Forte, Praia Grande.</p>
     </div>
+    <img [src]="getImagePath('abraco.png')" style="width: 250px; display: flex; margin: auto;" alt="Abraço da arlete">
 
 </div>

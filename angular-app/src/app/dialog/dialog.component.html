@@ -1,24 +1,30 @@
 <div id="dialog">
-    <h2 mat-dialog-title>Presente escolhido:</h2>
-    <h3>{{ data.value }}</h3>
-    <div mat-dialog-content>
-      <p class="description">Tenho certeza que a Arlete irá amar esse super mimo! 😍</p>
-      
-      <mat-form-field appearance="outline">
-        <mat-label>Chave PIX (Celular)</mat-label>
-        <input id="inputChavePix"matInput #inputElement value="13992030324" readonly tabindex="-1">
-        <button mat-icon-button matSuffix (click)="copyToClipboard(inputElement.value)">
-          <mat-icon>content_copy</mat-icon>
-        </button>
-      </mat-form-field>
-    
-      <div class="copy-button-container">
-        <button mat-button (click)="copyToClipboard(inputElement.value)">Copiar</button>
-      </div>
+  <button mat-icon-button mat-dialog-close class="close-button">
+    <mat-icon>close</mat-icon>
+  </button>
+  <h2>Presente escolhido:</h2>
+  <h3>{{ data.value }}</h3>
+  <div mat-dialog-content>
+    <p class="description">Tenho certeza que a Arlete irá amar esse super mimo! 😍</p>
+    <p class="description payment">Para finalizar, copie a chave pix abaixo e faça o pagamento em seu banco digital.</p>
 
-      <p class="tip">💡 <b>Dica: </b>É possível usar o aplicativo do banco para enviar uma mensagem de aniversário junto com o pix.</p>
+    <mat-form-field appearance="outline">
+      <mat-label>Chave PIX (Celular)</mat-label>
+      <input id="inputChavePix" matInput #inputElement value="13992030324" readonly tabindex="-1">
+      <button mat-icon-button matSuffix (click)="copyToClipboard(inputElement.value)">
+        <mat-icon>content_copy</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div class="copy-button-container">
+      <button mat-button (click)="copyToClipboard(inputElement.value)">Copiar</button>
     </div>
-    <div mat-dialog-actions>
-    
-    </div>
+
+    <p class="tip">💡 <b>Dica: </b>É possível usar o aplicativo do banco para enviar uma mensagem de aniversário junto
+      com o pix.</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close class="finishPayment" (click)="closeDialog()">Finalizei a transferência
+      do presente</button>
+  </div>
 </div>
