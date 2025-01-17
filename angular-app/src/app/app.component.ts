@@ -2,17 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
   imports: [MatCardModule, MatIconModule, MatButtonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  title = 'angular-app';
+  title = 'Arlete-50';
   greeting: string | undefined;
   imgPath: string | undefined;
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(value: string) {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: { value }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   ngOnInit() {
     this.greeting = this.getGreeting();

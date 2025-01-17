@@ -33,7 +33,7 @@
         <div class="event-container">
             <div class="event-date">08/02/2025</div>
             <div class="decorative-line"></div>
-            <div class="event-time">18:30 a 00:00</div>
+            <div class="event-time">18:30 às 00:00</div>
         </div>
 
     </div>
@@ -42,10 +42,13 @@
         <h1 class="title">Presentes</h1>
         <div class="decorative-line"></div>
         <p class="description">
-            Se você deseja me presentear, deixo aqui sugestões de presentes práticos e criativos, podendo ser realizados
-            com um PIX, que serão muito bem vindos e apreciados.
-            Fique à vontade para escolher o que achar melhor. Sua presença e carinho já são o maior presente que eu
-            poderia pedir!
+            Se deseja me presentear, deixo algumas sugestões práticas e criativas, que podem ser feitas via PIX, e que serão muito apreciadas. 
+        </p>
+        <p class="description">
+            Fique à vontade para escolher o que achar melhor; se preferir algo mais tradicional, um presente "material" será bem-vindo.
+        </p>
+        <p class="description">
+            Lembre-se que sua presença e carinho já são o maior presente para mim! ❤️
         </p>
         <div class="gifts-container">
 
@@ -54,7 +57,7 @@
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('pedicure.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Pedicure</h3>
+                    <h3 class="card-title" #cardTitle value="Pedicure - R$ 59,99">Pedicure</h3>
                     <p class="card-subtitle">R$ 59,99</p>
                     <p>
                         Depois de tantos passos dados, é hora de dar aos pés um tratamento VIP. Uma pedicure para deixar
@@ -63,41 +66,7 @@
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>PRESENTEAR ESSE</button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card class="card" appearance="outlined">
-
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('massagem.gif')">
-
-                <mat-card-content>
-                    <h3 class="card-title">Massagem</h3>
-                    <p class="card-subtitle">R$ 89,99</p>
-                    <p>
-                        Pague um gatinho para manter a aniversariante relaxada e sem dores nas articulações.
-                    </p>
-
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button>PRESENTEAR ESSE</button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card class="card" appearance="outlined">
-
-                <img mat-card-image class="mat-card-image" [src]="getImagePath('abafador.gif')">
-
-                <mat-card-content>
-                    <h3 class="card-title">Abafador de som</h3>
-                    <p class="card-subtitle">R$ 109,99</p>
-                    <p>
-                        Esse é para ajudar a aniversariante a conseguir dormir sem ouvir os roncos do marido.
-                    </p>
-
-                </mat-card-content>
-                <mat-card-actions>
-                    <button mat-button>PRESENTEAR ESSE</button>
+                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
@@ -106,15 +75,49 @@
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('escada.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Escadinha</h3>
-                    <p class="card-subtitle">R$ 129,99</p>
+                    <h3 class="card-title" #cardTitle2 value="Escadinha - R$ 79,99">Escadinha</h3>
+                    <p class="card-subtitle">R$ 79,99</p>
                     <p>
-                        Com esse presente você ajudará ela a alcançar as prateleiras mais altas de casa.
+                        Essa escada especial será muito útil para ela, pois você ajudará a baixinha a alcançar os lugares mais altos!
                     </p>
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>PRESENTEAR ESSE</button>
+                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle2.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('abafador.gif')">
+
+                <mat-card-content>
+                    <h3 class="card-title" #cardTitle3 value="Super abafador de som - R$ 99,99">Super abafador de som</h3>
+                    <p class="card-subtitle">R$ 99,99</p>
+                    <p>
+                        Esse é para ajudar a aniversariante a conseguir dormir sem ouvir os roncos do marido.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle3.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="card" appearance="outlined">
+
+                <img mat-card-image class="mat-card-image" [src]="getImagePath('massagem.gif')">
+
+                <mat-card-content>
+                    <h3 class="card-title" #cardTitle4 value="Massagem especimiau - R$ 119,99">Massagem especimiau</h3>
+                    <p class="card-subtitle">R$ 119,99</p>
+                    <p>
+                        Pague um gatinho para manter a aniversariante relaxada e sem dores nas articulações.
+                    </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle4.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
@@ -123,15 +126,15 @@
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('minion.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Biquini</h3>
-                    <p class="card-subtitle">R$ 149,99</p>
+                    <h3 class="card-title" #cardTitle5 value="Biquíni de marca - R$ 139,99">Biquíni de marca</h3>
+                    <p class="card-subtitle">R$ 139,99</p>
                     <p>
-                        Um biquíni novo para provar que, com 50tão, a dona Arlete ainda dá muito caldo.
+                        Neste verão, dê um biquíni chique para mostrar que mesmo com 50tão, a dona Arlete ainda dá muito caldo. 🏖️
                     </p>
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>PRESENTEAR ESSE</button>
+                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle5.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
@@ -140,15 +143,15 @@
                 <img mat-card-image class="mat-card-image" [src]="getImagePath('skyncare.gif')">
 
                 <mat-card-content>
-                    <h3 class="card-title">Creme antirrugas</h3>
-                    <p class="card-subtitle">R$ 179,99</p>
+                    <h3 class="card-title" #cardTitle6 value="Creme antirrugas - R$ 159,99">Creme antirrugas</h3>
+                    <p class="card-subtitle">R$ 159,99</p>
                     <p>
-                        Esse é um creme tão bom que os anos vão ter que lutar muito para aparecer no rosto dela!
+                        Diretamente da fonte da juventude, este creme é o segredo para a beleza natural. A aniversariante vai amar este presente especial!
                     </p>
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>PRESENTEAR ESSE</button>
+                    <button mat-button (click)="cardTitle.getAttribute('value') ? openDialog(cardTitle6.getAttribute('value')!) : null">PRESENTEAR ESSE</button>
                 </mat-card-actions>
             </mat-card>
 
@@ -164,10 +167,10 @@
             documento de todos os convidados.
         </p>
 
-        <div class="button-confirmar-presenca">
-            <a mat-fab extended href="https://www.google.com" rel="noopener noreferrer">
-                <mat-icon>check_circle</mat-icon>
-                <p class="confirmar-presenca">Clique aqui para confirmar!</p>
+        <div class="button-icon">
+            <a mat-fab extended href="https://docs.google.com/forms/d/e/1FAIpQLSemawCLKJ6Aw477lTE_q2YDm8nrfgdFghjHZ22NWAzdo5tQlQ/viewform?usp=header">
+                <mat-icon id="confirm">check_circle</mat-icon>
+                <p class="button-icon-text">Clique aqui para confirmar!</p>
             </a>
         </div>
 
@@ -177,10 +180,18 @@
         <h1 class="title">Localização</h1>
         <div class="decorative-line"></div>
         <p class="description">
-            Aguardo sua presença no salão de festas do prédio Renoir 2.
+            Aguardo sua presença no salão de festas do prédio residencial Renoir 2.
         </p>
-        <p class="description">R. Gen. Otelo Rodrigues Franco, 543 - Canto do Forte, Praia Grande.</p>
+        
         <img [src]="getImagePath('renoir2.jpg')" alt="Edifício Renoir 2" class="edificio">
+
+        <div class="button-icon">
+            <a mat-fab extended href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=/maps/place/R.%2BGen.%2BOtelo%2BRodrigues%2BFranco,%2B543%2B-%2BCanto%2Bdo%2BForte,%2BPraia%2BGrande%2B-%2BSP,%2B11700-700/data%3D!4m2!3m1!1s0x94ce1d094b1b0c9f:0xd212e3ee3dee1bdf%3Fsa%3DX%26ved%3D1t:242%26ictx%3D111&ved=2ahUKEwi0jsue7vuKAxUYr5UCHTtnAb8Q8gF6BAgjEAI&usg=AOvVaw3K4vX3nogKCu9uw8-spiUl">
+                <mat-icon id="map">pin_drop</mat-icon>
+                <p class="button-icon-text">Clique aqui para abrir no maps</p>
+            </a>
+        </div>
+        <p class="description address">📍 Rua General Otelo Rodrigues Franco, 543 - Canto do Forte, Praia Grande.</p>
     </div>
 
 </div>

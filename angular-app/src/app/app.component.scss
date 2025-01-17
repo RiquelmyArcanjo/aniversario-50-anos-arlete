@@ -24,6 +24,11 @@
     margin: 20px;
     line-height: 26px;
 }
+.address{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
 
 .main-container {
     background-color: #f0dcdc;
@@ -74,23 +79,56 @@ mat-icon {
     height: 325px;
 }
 
-.button-confirmar-presenca {
+.button-icon {
     display: flex;
     margin-top: 30px;
     margin-bottom: 40px;
     justify-content: center;
     align-items: center;
 
-    .mat-icon {
+    #confirm {
         color: rgb(9, 121, 84);
     }
+    #map {
+        font-size: 27px;
+        color: rgb(189, 26, 26);
+    }
 
-    .confirmar-presenca {
+    .button-icon-text {
         font-weight: 300;
     }
 
     .mat-mdc-extended-fab {
         background-color: #f0c4c4;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .mat-mdc-extended-fab:hover {
+        background-color: #e0b4b4;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .mat-mdc-extended-fab:active {
+        background-color: #d0a4a4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .mat-mdc-extended-fab:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(240, 196, 196, 0.5);
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        .mat-mdc-extended-fab {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mat-mdc-extended-fab:active {
+            background-color: #d0a4a4;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
     }
 }
 
