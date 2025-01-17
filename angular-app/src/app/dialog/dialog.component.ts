@@ -40,8 +40,8 @@ export class DialogComponent {
   closeDialog() {
     this.triggerConfetti();
     this.dialogRef.close();
-    this.snackBar.open('Se deu tudo certo em seu banco tenho certeza que o presente chegou em tempo recorde! Obrigado, ela irá amar 🎉🥳', '', {
-      duration: 10000,
+    this.snackBar.open('Se deu tudo certo em seu banco, tenho certeza que o presente chegou em tempo recorde! Obrigado, a Arlete irá amar 🎉🥳', '', {
+      duration: 11000,
     });
   }
 }
