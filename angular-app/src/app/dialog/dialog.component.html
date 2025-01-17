@@ -6,7 +6,7 @@
       
       <mat-form-field appearance="outline">
         <mat-label>Chave PIX (Celular)</mat-label>
-        <input id="inputChavePix"matInput #inputElement value="13992030324">
+        <input id="inputChavePix"matInput #inputElement value="13992030324" readonly tabindex="-1">
         <button mat-icon-button matSuffix (click)="copyToClipboard(inputElement.value)">
           <mat-icon>content_copy</mat-icon>
         </button>
